@@ -3,4 +3,4 @@
 - name: Ensure clone project from git
   git:
     repo: '{{ repo }}'
-    dest: {{ dest }}
+    dest: "{{ dest }}"
