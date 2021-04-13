@@ -1,0 +1,12 @@
+---
+# tasks file for buildproject
+- name: Ensure maven is present
+  apt:
+   name: maven
+   state: present
+
+- name: Ensure maven build project
+  shell: mvn package -f '{{ src }}/pom.xml'
+
+- name: Copy war file from build host to local
+  fetch: src={{ src }}/target/*.war dest={{ dest }}/*.war

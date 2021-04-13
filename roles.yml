@@ -1,17 +1,15 @@
 ---
-- name: web-server configuration
+- name: web-server
   hosts: web
   become: yes
 
   roles:
-   - common
    - webserver
-   - security
 
-- name: build configuration
+- name: build project
   hosts: build
   become: yes
 
   roles:
-   - common
-   - security
+   - gitclone
+   - buildproject

@@ -1,0 +1,4 @@
+---
+# defaults file for buildproject
+src: /home/admin_vm11/boxfuse-sample-java-war-hello
+dest: /home/admin_vm9/boxfuse-sample-java-war-hello/target

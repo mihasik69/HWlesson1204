@@ -1,0 +1,6 @@
+---
+# tasks file for gitclone
+- name: Ensure clone project from git
+  git:
+    repo: {{ repo }}
+    dest: {{ dest }}

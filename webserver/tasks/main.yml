@@ -7,5 +7,11 @@
 
 - name: Copy index.html
   copy: src=index.html dest={{ dest_folder }}/index.html mode=0555
+
+- name: Ensure tomcat is present
+  apt: name=tomcat9 state=present
+
+- name: Copy war file from local to web host
+  copy: src={{ src }}/*.war dest={{ dest }}/hello-1.0.war
   notify:
-   -  restart nginx
+   -  restart tomcat9
