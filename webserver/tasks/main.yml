@@ -4,6 +4,6 @@
   apt: name=tomcat9 state=present
 
 - name: Copy war file from local to web host
-  copy: src={{ src }}/*.war dest={{ dest }}/hello-1.0.war
+  copy: src={{ src }}/hello-1.0.war dest={{ dest }}/hello-1.0.war
   notify:
    -  restart tomcat9
