@@ -1,11 +1,4 @@
 ---
-- name: web-server
-  hosts: web
-  become: yes
-
-  roles:
-   - webserver
-
 - name: build project
   hosts: build
   become: yes
@@ -13,3 +6,12 @@
   roles:
    - gitclone
    - buildproject
+   -
+- name: web-server
+  hosts: web
+  become: yes
+
+  roles:
+   - webserver
+
+

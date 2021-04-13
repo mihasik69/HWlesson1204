@@ -1,13 +1,5 @@
 ---
 # tasks file for webserver
-- name: Install nginx
-  apt: 
-   name: nginx 
-   state: present
-
-- name: Copy index.html
-  copy: src=index.html dest={{ dest_folder }}/index.html mode=0555
-
 - name: Ensure tomcat is present
   apt: name=tomcat9 state=present
 
